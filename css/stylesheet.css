@@ -16,8 +16,8 @@
 .shrink {
   margin-top: 100px;
   margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 .news img {
@@ -44,4 +44,39 @@
 
 @keyframes push {
   50%  {transform: scale(0.95);}
+}
+
+.author {
+  color: #75bffa;
+  margin-top: 19px;
+  font-size: 20px;
+  font-family: sans-serif !important;
+}
+
+.author-picture {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  style: float-left;
+}
+
+.news-text {
+  margin-right: 150px;
+  margin-left: 150px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 18px;
+}
+
+.author-header {
+  display: flex;
+}
+
+.author-header img {
+  margin-right: 10px;
+  display: block;
+}
+
+.header-title {
+  margin-right: 250px;
 }
