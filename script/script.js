@@ -10,6 +10,7 @@ function trocaTema(){
     var tema = window.localStorage.getItem("tema_site_web");
     if(tema == null){
         temaEscuro();
+        window.localStorage.setItem("tema_site_web", "escuro");
     }else{
         if(tema === "claro"){
             temaEscuro();
