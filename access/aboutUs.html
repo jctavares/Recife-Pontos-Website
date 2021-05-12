@@ -9,11 +9,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+    <link id="theme" rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+    <script type="text/javascript" src="../script/script.js"></script>
     <title>About Us</title>
 </head>
 
-<body>
+<body onload="loadPage()">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">Pontos Recife</h1>
@@ -25,6 +26,7 @@
         <li><a href="faq.html">FAQ</a></li>
         <li><a class="active" href="aboutUs.html#">About Us</a></li>
         <li><a href="#">Contato</a></li>
+        <li><a onclick="trocaTema()" href="#">Aparência</a></li>
       </ul>
       
 <div class="geral">

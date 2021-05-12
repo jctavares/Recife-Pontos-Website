@@ -89,7 +89,7 @@
   padding: 0;
   overflow: hidden;
   /*border: 1px solid #e7e7e7;*/
-  background-color: #f3f3f3;
+  background-color: #333;
 }
 
 .menu li {
@@ -99,14 +99,14 @@
 
 .menu li a {
   display: block;
-  color: #666;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .menu li a:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #111;
 }
 
 .menu li:last-of-type {
@@ -115,12 +115,12 @@
 }
 
 .menu li:last-of-type a{
-  background-color: #333;
-  color: white;
+  background-color: #f3f3f3;
+  color: #666;
 }
 
 .menu li:last-of-type a:hover:not(.active){
-  background-color: #111;
+  background-color: #ddd;
 }
 
 .menu li a.active {

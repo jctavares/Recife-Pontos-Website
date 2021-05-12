@@ -5,17 +5,18 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+  <link id="theme" rel="stylesheet" href="css/stylesheet.css" type="text/css">
   <script type="text/javascript" src="script/script.js"></script>
   <title>Recife Pontos</title>
 </head>
-<body onload="apresentar(1)">
+<body onload="loadPage()">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Pontos Recife</h1>
       <p class="lead">Guia Turístico simplificado sobre a cidade do Recife!</p>
     </div>
-    <div class="banner">
+    <!--
+      <div class="banner">
       <div class="banner-slide">
           <img src="assets/carrossel/marco1.jpg">
       </div>
@@ -32,12 +33,14 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
           <img src="assets/carrossel/marco5.jpg">
       </div>
   </div>
+    -->
   </div>
   <ul class="menu">
     <li><a class="active" href="index.html">Home</a></li>
     <li><a href="access/faq.html">FAQ</a></li>
     <li><a href="access/aboutUs.html">About Us</a></li>
     <li><a href="#">Contato</a></li>
+    <li><a onclick="trocaTema()" href="#">Aparência</a></li>
   </ul>
   <div class="shrink">
     <h1>Dicas para os turistas:</h1>
