@@ -3,7 +3,7 @@
 }
 .card-img-top {
   width: 100%;
-  height: 100%
+  height: 100%;
   object-fit: cover;
 }
 
@@ -79,4 +79,134 @@
 
 .header-title {
   margin-right: 250px;
+}
+
+/* menu */
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+.menu li {
+  float: left;
+  border-right: 1px solid rgb(148, 148, 148);
+}
+
+.menu li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.menu li a.active {
+  color: white;
+  background-color: deepskyblue;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  display: flex;
+}
+
+/* About us */
+
+.geral h5 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.geral h1 {
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+
+}
+
+.geral h2 {
+  font-family: Georgia;
+  font-size: 20px;
+  color: black;
+
+}
+
+.geral div {
+  text-align: center;
+  max-width: 80rem;
+
+}
+
+.geral p {
+  font-family: Garamond, serif;
+  font-size: 15px;
+
+}
+
+.geral em {
+  font-family: Garamond, serif;
+  font-size: 20px;
+
+}
+
+.geral p.none {
+  border-style: none;
+}
+/*
+body {
+  background: lightblue;
+}
+*/
+.geral {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.geral a {
+  color: black;
+}
+
+/* Banner animado */
+
+.banner {
+  max-width: 1000px;
+  max-height: 400px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+
+.banner img {
+  max-width: 600px;
+}
+
+/* Animação */
+.slide {
+  display: none;
+  animation-name: animacao;
+  animation-duration: 3.5s;
+}
+
+@keyframes animacao {
+  from {
+      opacity: 0.2;
+  }
+
+  to {
+      opacity: 1;
+  }
 }
