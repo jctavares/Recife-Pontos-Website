@@ -81,8 +81,6 @@
   margin-right: 250px;
 }
 
-/* menu */
-
 .menu {
   list-style-type: none;
   margin: 0;
@@ -164,11 +162,7 @@
 .geral p.none {
   border-style: none;
 }
-/*
-body {
-  background: lightblue;
-}
-*/
+
 .geral {
   width: 100%;
   display: flex;
@@ -194,8 +188,7 @@ body {
   max-width: 600px;
 }
 
-/* Animação */
-.slide {
+.banner-slide {
   display: none;
   animation-name: animacao;
   animation-duration: 3.5s;
