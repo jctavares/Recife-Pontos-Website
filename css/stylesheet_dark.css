@@ -47,12 +47,24 @@ hr {
   background-color: rgb(0, 99, 133);
 }
 
-.modal-header, .modal-footer {
-  background-color: #666;
+.modal-body a {
+  color: #90cbfc;
 }
 
-.btn-secondary {
+.modal-body .list-group-item {
+  border-color: rgba(255, 255, 255, 0.800);
+}
 
+.modal-body li {
+  background-color: rgb(0, 164, 219);
+}
+
+.modal-body li a {
+  color: white;
+}
+
+.modal-header, .modal-footer {
+  background-color: #666;
 }
 
 .shrink {
@@ -132,7 +144,11 @@ hr {
   padding: 0;
   overflow: hidden;
   /*border: 1px solid #e7e7e7;*/
+  
   background-color: #333;
+  /*
+  background-color: rgb(0, 99, 133);
+  */
 }
 
 .menu li {
@@ -168,7 +184,10 @@ hr {
 
 .menu li a.active {
   color: white;
+  /*
   background-color: deepskyblue;
+  */
+  background-color: rgb(0, 99, 133);
 }
 
 .jumbotron {
@@ -279,3 +298,51 @@ body {
 .show-spots {
   float: right;
 }
+
+.news a:hover {
+  background-color: rgb(0, 99, 133);
+}
+
+.show-spots .btn-primary {
+  color: aliceblue;
+  border-color: rgb(0, 99, 133);
+  background-color: rgb(0, 99, 133);
+}
+
+.show-spots .btn-primary:hover {
+  border-color: rgb(0, 78, 104);
+  background-color: rgb(0, 78, 104);
+}
+
+.show-spots .btn-primary:focus {
+  box-shadow: 0 0 10px 0 rgb(0, 99, 133, 0.800);
+}
+
+.show-spots .btn-primary:active {
+  border-color: rgb(0, 78, 104)!important;
+  background-color: rgb(0, 78, 104)!important;
+  box-shadow: 0 0 10px 0 rgba(0, 99, 133, 0.800)!important;
+}
+/*
+.btn-outline-primary {
+  color: aliceblue;
+  border-color: aliceblue;
+}
+
+.btn-outline-primary:hover {
+  color: rgb(0, 99, 133);
+  border-color: aliceblue;
+  background-color: aliceblue;
+}
+
+.btn-outline-primary:active {
+  color: rgb(0, 99, 133)!important;
+  border-color: aliceblue!important;
+  background-color: aliceblue!important;
+  box-shadow: 0 0 10px 0 rgba(240, 248, 255, 0.800)!important;
+}
+
+.btn-outline-primary:focus {
+  box-shadow: 0 0 10px 0 rgba(240, 248, 255, 0.800);
+}
+*/
