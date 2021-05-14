@@ -215,15 +215,10 @@
   }
 }
 
-<<<<<<< HEAD
 .show-spots {
   float: right;
-=======
-.jumbotron .container {
-  float: left;
 }
 
 .jumbotron {
   display: flex;
->>>>>>> b49b1712db9505ec3bcaba624904bb5b1468c7cb
 }

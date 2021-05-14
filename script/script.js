@@ -29,7 +29,7 @@ function temaEscuro(){
         tema.setAttribute('href', src);
     }else{
         tema.setAttribute('href', "../"+src);
-    }
+    } 
 }
 
 function temaClaro(){
