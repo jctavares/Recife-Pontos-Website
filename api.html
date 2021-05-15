@@ -12,10 +12,10 @@
 
 
     <meta charset="utf-8">
-    <script type="text/javascript" src="../script/script.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link id="theme" rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+    <link id="theme" rel="stylesheet" href="css/stylesheet.css" type="text/css">
     <title>Notícias Recentes</title>
 </head>
 
@@ -28,11 +28,11 @@
 
     </div>
     <ul class="menu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="aboutUs.html">About Us</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a class="active" href="noticias.html">Últimas Notícias</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="access/faq.html">FAQ</a></li>
+        <li><a href="access/aboutUs.html">About Us</a></li>
+        <li><a href="access/contato.html">Contato</a></li>
+        <li><a href="access/noticias.html">Últimas Notícias</a></li>
         <li><a onclick="trocaTema()" href="#">Aparência</a></li>
     </ul>
 
@@ -41,11 +41,10 @@
     <script type="text/babel">
         class App extends React.Component {
             state = {
-                descriptionOfTime: []
+                descriptionOfTime: [a]
             }
-
             componentDidMount() {
-                fetch('http://apiadvisor.climatempo.com.br/api/v1/anl/synoptic/locale/BR?token=70858c73061659186e1b43e0cdec3e47')
+                fetch('http://apiadvisor.climatempo.com.br/api/v1/anl/synoptic/locale/BR?token=d8307ab4302a3973182f1af0243a1c63')
                     .then(res => res.json())
                     .then(res => {
                         this.setState({
@@ -53,7 +52,6 @@
                         })
                     })
             }
-
             render() {
                 return (
                     <div class="shrink">
