@@ -46,7 +46,7 @@
 
 
             componentDidMount() {
-                fetch('http://api.openweathermap.org/data/2.5/weather?q=Recife&appid=84e44bb6dc30c867d244898690b769b9')
+                fetch('https://geek-jokes.sameerkumar.website/api?format=json')
                     .then(res => res.json())
                     .then(res => {
                         this.setState(({ descriptionOfTime }) => ({
@@ -60,11 +60,10 @@
 
                 return (
                     <div class="shrink">
-                        <h1 class="display-4">Wheater with REST</h1>
+                        <h1 class="display-4">Wheater</h1>
                         {this.state.descriptionOfTime.map(kb => (
-                            <div key={kb.name}>
-                                <p><b>City:</b> {kb.name}</p>
-                                <p><b>Weather in this moment:</b> {kb.weather[0].description}</p>
+                            <div key={kb.joke}>
+                                <p><b>Fast Joker:</b> {kb.joke}</p>
                             </div>
                         ))}
                     </div>
