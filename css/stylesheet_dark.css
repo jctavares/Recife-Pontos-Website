@@ -358,7 +358,7 @@ textarea {
 
 .jumbotron {
   background: url('../assets/site_header/banner-by-night.jpg') !important;
-  object-fit: cover !important;
+  background-size: cover !important;
   width: 100%;
   filter: brightness(90%) !important;
 }
