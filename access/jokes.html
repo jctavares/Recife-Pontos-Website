@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <link rel="shortcut icon" href="#" />
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../script/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link id="theme" rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+    <title>Notícias Recentes</title>
+</head>
+
+<body onload="loadPage()">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Pontos Recife</h1>
+            <p class="lead">Guia Turístico simplificado sobre a cidade do Recife!</p>
+        </div>
+    </div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="noticias.html">Últimas Notícias</a></li>
+        <li><a onclick="trocaTema()" href="#">Aparência</a></li>
+    </ul>
+    <div class="shrink">
+        <h1 class="display-4">Jokes</h1>
+        <h5>Conteúdo em inglês</h5>
+        <div id="root"></div>
+        <button type="submit" class="btn btn-primary" onclick="joke()">Gerar "Geek Joke"</button>
+    </div>
+    <script type="text/babel">
+        function joke() {
+            class App extends React.Component {
+                state = {
+                    descriptionOfTime: []
+                }
+                componentDidMount() {
+                    fetch('https://geek-jokes.sameerkumar.website/api?format=json')
+                        .then(res => res.json())
+                        .then(res => {
+                            this.setState(({ descriptionOfTime }) => ({
+                                descriptionOfTime: [...descriptionOfTime, res]
+                            }));
+                        })
+                }
+                render() {
+                    console.log(this.state.descriptionOfTime)
+                    return (
+                        //<div class="shrink">
+                        //<h1 class="display-4">Wheater</h1>
+                        <div>
+                            {this.state.descriptionOfTime.map(kb => (
+                                <div key={kb.joke}>
+                                    <p><b>Fast Joker:</b> {kb.joke}</p>
+                                </div>
+                            ))}
+                        </div>
+                    )
+                }
+            }
+            ReactDOM.render(<App />, document.getElementById('root'));
+        }
+    </script>
+</body>
+
+</html>

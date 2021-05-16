@@ -362,3 +362,14 @@ textarea {
   width: 100%;
   filter: brightness(90%) !important;
 }
+/*
+.container h1, .container p {
+  /*background-color: rgba(51, 51, 51, 0.500);
+  box-shadow: rgba(17, 17, 17, 0.819)!important;
+  max-width: fit-content;
+}
+*/
+label {
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
