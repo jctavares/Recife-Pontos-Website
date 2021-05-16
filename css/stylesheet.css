@@ -110,6 +110,7 @@
 .menu li:last-of-type {
   border-right: none;
   float: right;
+  cursor: pointer;
 }
 
 .menu li:last-of-type a{
@@ -119,6 +120,7 @@
 
 .menu li:last-of-type a:hover:not(.active){
   background-color: #111;
+  color: white;
 }
 
 .menu li a.active {
@@ -261,4 +263,35 @@ textarea {
   background-size: cover !important;
   width: 100%;
   filter: brightness(90%) !important;
+}
+
+label {
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.menu .dropdown {
+  color: #666;
+  position: absolute;
+  display: inline-block;
+  border: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  /*position: absolute;*/
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
