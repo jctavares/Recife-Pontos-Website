@@ -44,7 +44,15 @@
     <div class="shrink">
       <h1>Contato</h1>
       <p>Sugestões e pontos extras, basta mandar um e-mail:
-      <span class="news msg-box"><a href="mailto: joao.2019170990@unicap.br">Clique aqui</a></span>
+      <!--
+        <span class="news msg-box"><a href="mailto: joao.2019170990@unicap.br">Clique aqui</a></span>
+      -->
+      <form action="mailto:youraddr@domain.tld" method="GET">
+        <label>Assunto</label><br><input name="subject" type="text" class="form-control" id="exampleFormControlInput1"/><br>
+        <label>Mensagem </label><br><textarea name="body" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea><br>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="reset" class="btn btn-primary">Limpar</button>
+      </form>
       </div>
 </body>
 </html>
