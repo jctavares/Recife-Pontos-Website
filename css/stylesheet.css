@@ -255,3 +255,10 @@
 textarea {
   min-height: 100px;
 }
+
+.jumbotron {
+  background: url('../assets/site_header/Pontes_do_Bairro_do_Recife_Antigo.jpg') !important;
+  object-fit: cover !important;
+  width: 100%;
+  filter: brightness(90%) !important;
+}
