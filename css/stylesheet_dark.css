@@ -401,4 +401,6 @@ label {
 .dropdown:hover .dropdown-content {
   display: block;
   background-color: rgb(59, 59, 59);
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,10px) !important;
 }
