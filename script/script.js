@@ -1,11 +1,4 @@
-function apresentar(slideAtual) {
-    var slides = document.getElementsByClassName("banner-slide");
-    slides[slideAtual - 1].style.display = "none";
-    slideAtual = slideAtual % slides.length;
-    slides[slideAtual].style.display = "block";
-    setTimeout(() => apresentar(slideAtual + 1), 2000);
-}
-
+//Função que alterna os temas claro/escuro do site
 function trocaTema() {
     var tema = window.localStorage.getItem("tema_site_web");
     if (tema == null) {
@@ -22,6 +15,7 @@ function trocaTema() {
     }
 }
 
+//função que define o css do site para o css de tema escuro
 function temaEscuro() {
     var tema = document.getElementById("theme");
     var src = "css/stylesheet_dark.css";
@@ -32,6 +26,7 @@ function temaEscuro() {
     }
 }
 
+//função que define o css do site para o css de tema claro
 function temaClaro() {
     var tema = document.getElementById("theme");
     var src = "css/stylesheet.css";
@@ -42,8 +37,8 @@ function temaClaro() {
     }
 }
 
+//função de carregamento padrão das páginas, carregando o tema anteriormente selecionado(armazenado com local storage)
 function loadPage() {
-    //apresentar(1);
     var tema = window.localStorage.getItem("tema_site_web");
     if (tema != null) {
         if (tema == "escuro") {
@@ -52,6 +47,7 @@ function loadPage() {
     }
 }
 
+//função que solicita uma piada da api
 function geekJoke() {
     fetch('https://geek-jokes.sameerkumar.website/api?format=json')
         .then(res => res.json())
@@ -64,30 +60,7 @@ function geekJoke() {
         })
 }
 
-function weather(){
-    fetch("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=-34.88409413852257&lat=-8.052483683936776&units=metric&lang=pt", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-key": "854406fd64msh84f08b4d8984c96p195335jsn8d7db3fb2438",
-            "x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com"
-        }
-    })
-    .then(response => {
-        console.log(response.get);
-        var tabela = "<table><tr><td>Timestamp Local</td><td>Temperatura</td><td>Sensação Térmica</td><td>Descrição</td>";
-        var tag;
-        for(var i=0; i<response.data.length; i++){
-            tag = response.data[i];
-            tabela += "<tr><td>"+tag.timestamp_local+"</td><td>"+tag.temp+"</td><td>"+tag.app_temp+"</td><td>"+tag.weather.description+"</td></tr>";
-        }
-        tabela += "</table>";
-        document.getElementById("root").innerHTML = tabela;
-    })
-    .catch(err => {
-        console.error(err);
-    });
-}
-
+//função que pergunta se o dia selecionado é feriado no brasil. Se for, também informa o nome.
 function verFeriado(){
     var check = true;
     var dia = document.getElementById('dia').value;

@@ -1,3 +1,4 @@
+/* cards */
 .card {
   box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.35);
 }
@@ -128,95 +129,29 @@
   background-color: deepskyblue;
 }
 
-.jumbotron {
-  margin-bottom: 0;
+/* dropdown menu */
+.dropbtn {
+  cursor: pointer;
 }
 
-/* About us */
-
-.geral h5 {
-  font-family: Georgia, serif;
-  font-size: 30px;
-  color: black;
-  font-weight: bold;
+.menu .dropdown {
+  color: #666;
+  position: absolute;
+  display: inline-block;
+  border: none;
 }
 
-.geral h1 {
-  font-family: Georgia, serif;
-  font-size: 40px;
-  color: black;
-  font-weight: bold;
-
-}
-
-.geral h2 {
-  font-family: Georgia;
-  font-size: 20px;
-  color: black;
-
-}
-
-.geral div {
-  text-align: center;
-  max-width: 80rem;
-
-}
-
-.geral p {
-  font-family: Garamond, serif;
-  font-size: 15px;
-
-}
-
-.geral em {
-  font-family: Garamond, serif;
-  font-size: 20px;
-
-}
-
-.geral p.none {
-  border-style: none;
-}
-
-.geral {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.geral a {
-  color: black;
-}
-
-/* Banner animado */
-
-.banner {
-  max-width: 1000px;
-  max-height: 400px;
-  height: 400px;
-  position: relative;
-  margin: auto;
-}
-
-.banner img {
-  max-width: 600px;
-}
-
-.banner-slide {
+.dropdown-content {
   display: none;
-  animation-name: animacao;
-  animation-duration: 3.5s;
+  /*position: absolute;*/
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes animacao {
-  from {
-      opacity: 0.2;
-  }
-
-  to {
-      opacity: 1;
-  }
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: white;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,10px) !important;
 }
 
 .show-spots {
@@ -224,7 +159,12 @@
 }
 
 .jumbotron {
+  margin-bottom: 0;
   display: flex;
+  background: url('../assets/site_header/Pontes_do_Bairro_do_Recife_Antigo.jpg') !important;
+  background-size: cover !important;
+  width: 100%;
+  filter: brightness(90%) !important;
 }
 
 .social-media-icon img {
@@ -258,42 +198,9 @@ textarea {
   min-height: 100px;
 }
 
-.jumbotron {
-  background: url('../assets/site_header/Pontes_do_Bairro_do_Recife_Antigo.jpg') !important;
-  background-size: cover !important;
-  width: 100%;
-  filter: brightness(90%) !important;
-}
-
 label {
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
 
-/* Style The Dropdown Button */
-.dropbtn {
-  cursor: pointer;
-}
 
-/* The container <div> - needed to position the dropdown content */
-.menu .dropdown {
-  color: #666;
-  position: absolute;
-  display: inline-block;
-  border: none;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  /*position: absolute;*/
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-  background-color: white;
-  transform-style: preserve-3d;
-  transform: translate3d(0,0,10px) !important;
-}

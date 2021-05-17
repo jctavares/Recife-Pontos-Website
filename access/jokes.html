@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -12,6 +13,7 @@
     <link id="theme" rel="stylesheet" href="../css/stylesheet.css" type="text/css">
     <title>Notícias Recentes</title>
 </head>
+
 <body onload="loadPage()">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -25,16 +27,16 @@
         <li><a href="aboutUs.html">About Us</a></li>
         <li><a href="contato.html">Contato</a></li>
         <li><a href="noticias.html">Últimas Notícias</a></li>
-    <li class="dropdown">
-      <a class="dropbtn">Aplicações</a>
-      <div class="dropdown-content">
-        <a href="jokes.html">Jokes</a>
-        <a href="clima.html">Clima</a>
-        <a href="feriados.html">Feriados</a>
-    </li>
-    <li><a>Aplicações</a></li>
-    <li><a onclick="trocaTema()">Aparência</a></li>
-  </ul>
+        <li class="dropdown">
+            <a class="dropbtn active">Aplicações</a>
+            <div class="dropdown-content">
+                <a href="jokes.html#">Jokes</a>
+                <a href="feriados.html">Feriados</a>
+            </div>
+        </li>
+        <li><a>Aplicações</a></li>
+        <li><a onclick="trocaTema()">Aparência</a></li>
+    </ul>
     <div class="shrink">
         <h1>Jokes</h1>
         <h5>Conteúdo em inglês</h5>
@@ -73,4 +75,5 @@
         }
     </script>
 </body>
+
 </html>
