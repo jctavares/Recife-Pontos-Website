@@ -32,6 +32,7 @@
             <div class="dropdown-content">
                 <a href="jokes.html#">Jokes</a>
                 <a href="feriados.html">Feriados</a>
+                <a href="clima.html">Clima</a>
             </div>
         </li>
         <li><a>Aplicações</a></li>
@@ -41,39 +42,8 @@
         <h1>Jokes</h1>
         <h5>Conteúdo em inglês</h5>
         <div id="root"></div>
-        <button type="submit" class="btn btn-primary" onclick="joke()">Gerar "Geek Joke"</button>
+        <button type="submit" class="btn btn-primary" onclick="geekJoke()">Gerar "Geek Joke"</button>
     </div>
-    <script type="text/babel">
-        function joke() {
-            class App extends React.Component {
-                state = {
-                    descriptionOfTime: []
-                }
-                componentDidMount() {
-                    fetch('https://geek-jokes.sameerkumar.website/api?format=json')
-                        .then(res => res.json())
-                        .then(res => {
-                            this.setState(({ descriptionOfTime }) => ({
-                                descriptionOfTime: [...descriptionOfTime, res]
-                            }));
-                        })
-                }
-                render() {
-                    console.log(this.state.descriptionOfTime)
-                    return (
-                        <div>
-                            {this.state.descriptionOfTime.map(kb => (
-                                <div key={kb.joke}>
-                                    <p><b>Fast Joker:</b> {kb.joke}</p>
-                                </div>
-                            ))}
-                        </div>
-                    )
-                }
-            }
-            ReactDOM.render(<App />, document.getElementById('root'));
-        }
-    </script>
 </body>
 
 </html>

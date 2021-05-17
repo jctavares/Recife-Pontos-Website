@@ -28,10 +28,11 @@
         <li><a href="contato.html">Contato</a></li>
         <li><a href="noticias.html">Últimas Notícias</a></li>
         <li class="dropdown">
-            <a class="dropbtn">Aplicações</a>
+            <a class="dropbtn active">Aplicações</a>
             <div class="dropdown-content">
                 <a href="jokes.html">Jokes</a>
                 <a href="feriados.html">Feriados</a>
+                <a href="clima.html">Clima</a>
             </div>
         </li>
         <li><a>Aplicações</a></li>
@@ -39,77 +40,12 @@
     </ul>
     <div class="shrink">
         <h1>Previsão do tempo</h1>
-        <h5>Clique para obter a previsão dos próximos 5 dias no Recife</h5>
+        <h5>Segue a previsão dos próximos 5 dias no Recife</h5><br>
+        <div id="root">
+            <button type="submit" class="btn btn-primary" onclick="weather()">Gerar</button>
+        </div>
     </div>
-    <div id="root">
-        <button type="submit" class="btn btn-primary" onclick="weather()">Gerar</button>
-    </div>
-    <script type="text/babel">
-        /*
-        class App extends React.Component {
-            state = {
-                descriptionOfTime: []
-            }
-            componentDidMount() {
-                fetch('http://api.openweathermap.org/data/2.5/weather?q=Recife&lang=pt&appid=84e44bb6dc30c867d244898690b769b9')
-                    .then(res => res.json())
-                    .then(res => {
-                        this.setState(({ descriptionOfTime }) => ({
-                            descriptionOfTime: [...descriptionOfTime, res]
-                        }));
-                    })
-            }
-            render() {
-                console.log(this.state.descriptionOfTime)
-                return (
-                    <div class="shrink">
-                        <h1 class="display-4">Wheater with REST</h1>
-                        {this.state.descriptionOfTime.map(kb => (
-                            <div key={kb.name}>
-                                <p><b>City:</b> {kb.name}</p>
-                                <p><b>Weather in this moment:</b> {kb.weather[0].description}</p>
-                            </div>
-                        ))}
-                    </div>
-                )
-            }
-        }
-        ReactDOM.render(<App />, document.getElementById('root'));
-        */
-       //ddb617864958204f317180a3051373ce//key
-        function weather(){
-            fetch("https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=-8.05793209121678&lon=-34.8833302681417&units=metric&lang=pt", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "854406fd64msh84f08b4d8984c96p195335jsn8d7db3fb2438",
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com"
-	}
-})
-.then(response => response.json())
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
-    /*fetch("http://api.openweathermap.org/data/2.5/forecast?q=Recife&units=metric&lang=pt&appid=84e44bb6dc30c867d244898690b769b9")
-    .then(response => response.json())
-    .then(response => {
-        console.log(response);
-        var tabela = "<table><tr><td>Timestamp Local</td><td>Temperatura</td><td>Sensação Térmica</td><td>Descrição</td>";
-        var tag;
-        for(var i=0; i<response.list.length; i++){
-            tag = response.list[i];
-            tabela += "<tr><td>"+tag.dt_txt+"</td><td>"+tag.main.temp+"</td><td>"+tag.main.feels_like+"</td><td>"+tag.weather[0].description+"</td></tr>";
-        }
-        tabela += "</table>";
-        document.getElementById("root").innerHTML = tabela;
-    })
-    .catch(err => {
-        console.error(err);
-    });*/
-}
-    </script>
+    
 
 </body>
 
