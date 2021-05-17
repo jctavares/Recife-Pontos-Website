@@ -161,10 +161,9 @@
 .jumbotron {
   margin-bottom: 0;
   display: flex;
-  background: url('../assets/site_header/Pontes_do_Bairro_do_Recife_Antigo.jpg') !important;
+  background: url('../assets/site_header/DSC01964.JPG') !important;
   background-size: cover !important;
   width: 100%;
-  filter: brightness(90%) !important;
 }
 
 .social-media-icon img {
@@ -202,5 +201,3 @@ label {
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
-
-
