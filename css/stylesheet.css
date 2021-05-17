@@ -1,5 +1,6 @@
 .card {
   box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.35);
+  z-index: -1 !important;
 }
 
 .card img{
