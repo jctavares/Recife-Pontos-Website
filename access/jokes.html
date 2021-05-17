@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <link rel="shortcut icon" href="#" />
@@ -14,7 +12,6 @@
     <link id="theme" rel="stylesheet" href="../css/stylesheet.css" type="text/css">
     <title>Notícias Recentes</title>
 </head>
-
 <body onload="loadPage()">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -62,8 +59,6 @@
                 render() {
                     console.log(this.state.descriptionOfTime)
                     return (
-                        //<div class="shrink">
-                        //<h1 class="display-4">Wheater</h1>
                         <div>
                             {this.state.descriptionOfTime.map(kb => (
                                 <div key={kb.joke}>
@@ -78,5 +73,4 @@
         }
     </script>
 </body>
-
 </html>
