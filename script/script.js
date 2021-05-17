@@ -65,7 +65,27 @@ function geekJoke() {
 }
 
 function weather(){
-
+    fetch("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=-34.88409413852257&lat=-8.052483683936776&units=metric&lang=pt", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "854406fd64msh84f08b4d8984c96p195335jsn8d7db3fb2438",
+            "x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com"
+        }
+    })
+    .then(response => {
+        console.log(response.get);
+        var tabela = "<table><tr><td>Timestamp Local</td><td>Temperatura</td><td>Sensação Térmica</td><td>Descrição</td>";
+        var tag;
+        for(var i=0; i<response.data.length; i++){
+            tag = response.data[i];
+            tabela += "<tr><td>"+tag.timestamp_local+"</td><td>"+tag.temp+"</td><td>"+tag.app_temp+"</td><td>"+tag.weather.description+"</td></tr>";
+        }
+        tabela += "</table>";
+        document.getElementById("root").innerHTML = tabela;
+    })
+    .catch(err => {
+        console.error(err);
+    });
 }
 
 function verFeriado(){
