@@ -1,53 +1,58 @@
 <DOCTYPE! html>
-  <html>
+<html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <script type="text/javascript" src="../script/script.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link id="theme" rel="stylesheet" href="../css/stylesheet.css" type="text/css">
-    <title>FAQ</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <script type="text/javascript" src="../script/script.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link id="theme" rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+  <title>FAQ</title>
+</head>
 
-  <body onload="loadPage()">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Pontos Recife</h1>
-        <p class="lead">Guia Turístico simplificado sobre a cidade do Recife!</p>
+<body onload="loadPage()">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Pontos Recife</h1>
+      <p class="lead">Guia Turístico simplificado sobre a cidade do Recife!</p>
+    </div>
+  </div>
+  <ul class="menu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a class="active" href="faq.html#">FAQ</a></li>
+    <li><a href="aboutUs.html">About Us</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="noticias.html">Últimas Notícias</a></li>
+    <li class="dropdown">
+      <a class="dropbtn">Aplicações</a>
+      <div class="dropdown-content">
+        <a href="jokes.html">Jokes</a>
+        <a href="feriados.html">Feriados</a>
       </div>
-    </div>
-    <ul class="menu">
-      <li><a href="../index.html">Home</a></li>
-      <li><a class="active" href="faq.html#">FAQ</a></li>
-      <li><a href="aboutUs.html">About Us</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="noticias.html">Últimas Notícias</a></li>
-      <li class="dropdown">
-        <a class="dropbtn">Aplicações</a>
-        <div class="dropdown-content">
-          <a href="jokes.html">Jokes</a>
-          <a href="feriados.html">Feriados</a>
-        </div>
-      </li>
-      <li><a>Aplicações</a></li>
-      <li><a onclick="trocaTema()">Aparência</a></li>
-    </ul>
-    <div class="shrink">
-      <h1>Sobre o projeto<h1>
-          <h5><b>Q. Quais tecnologias foram utilizadas para o desenvolvimento do site?</b></h5>
-          <p>A: O site foi desenvolvido utilizando HTML, CSS, um pouco de JavaScript, Bootstrap
-            e um tico de ReactJS.</p><br>
-          <h5><b>Q. Qual o objetivo do site?</b></h5>
-          <p>A: Além de passar na cadeira, o objetivo é que o site sirva como um guia
-            mostrando alguns pontos turísticos da cidade juntamente com dicas para
-            os turistas.</p><br>
-          <h5>Q. Quais os empecilhos que vocês encontraram no projeto?</h5>
-          <p>A: Encontrar API's que mostrassem o clima, mas que fossem gratuitas
-          e não tivesse problemas de segurança (CORS).</p>
-    </div>
-    <hr>
-  </body>
-
+    </li>
+    <li><a>Aplicações</a></li>
+    <li><a onclick="trocaTema()">Aparência</a></li>
+  </ul>
+  <div class="shrink">
+    <h1>Sobre o projeto<h1>
+      <h5>Q. Quais tecnologias foram utilizadas para o desenvolvimento do site?</h5>
+      <p>A: O site foi desenvolvido utilizando as seguintes tecnologias:
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Bootstrap 4 (pra deixar o site bonitinho)</li>
+          <li>JavaScript (pra adicionar comportamentos ao site)</li>
+        </ul>
+      </p><br>
+      <h5>Q. Qual o objetivo do site?</h5>
+      <p>A: Além de passar na cadeira, o objetivo é que o site pareça/seja um mockup de um guia
+        turístico. <br>Ao clicar em cada card se abre um modal, responsável
+        por mostrar informações sobre aquele ponto de maneira resumida. Caso
+        o usuário deseje obter mais informações, dentro do próprio modal existe
+        uma seção com mais referências.<br>Além disso, o usuário pode ver se data
+        na qual ele vai viajar pra Recife é feriado ou não e acompanhar notícias relevantes
+        sobre a cidade.</p><br>
+      </div>
+    </body>
   </html>
