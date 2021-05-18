@@ -30,7 +30,7 @@
         <li class="dropdown">
             <a class="dropbtn active">Aplicações</a>
             <div class="dropdown-content">
-                <a href="jokes.html#">Jokes</a>
+                <a href="jokes.html">Jokes</a>
                 <a href="feriados.html">Feriados</a>
                 <a href="clima.html">Clima</a>
             </div>
@@ -39,11 +39,14 @@
         <li><a onclick="trocaTema()">Aparência</a></li>
     </ul>
     <div class="shrink">
-        <h1>Jokes</h1>
-        <h5>Conteúdo em inglês</h5>
-        <div id="root"></div>
-        <button type="submit" class="btn btn-primary" onclick="geekJoke()">Gerar "Geek Joke"</button>
+        <h1>Previsão do tempo</h1>
+        <h5>Segue a previsão dos próximos 5 dias no Recife</h5><br>
+        <div id="root">
+            <button type="submit" class="btn btn-primary" onclick="weather()">Gerar</button>
+        </div>
     </div>
+    
+
 </body>
 
 </html>

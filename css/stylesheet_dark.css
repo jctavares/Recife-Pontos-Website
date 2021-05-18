@@ -294,4 +294,11 @@ label {
   margin-left: 0.5%;
 }
 
+/* tabela */
+.table {
+  text-align: center;
+}
 
+.table-hover tbody tr:hover {
+  background-color: #111;
+}
